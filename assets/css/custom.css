@@ -1,0 +1,40 @@
+/*
+  custom.css — your site's style overrides
+  This file is loaded on top of the Blowfish theme styles.
+
+  FONT
+  ----
+  To change the font, replace the font name in the @import URL and the font-family below.
+  Browse fonts at: https://fonts.google.com
+  Good options for academic pages: Lora, Source Serif 4, Libre Baskerville, Merriweather
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+body {
+  font-family: 'Lora', Georgia, serif;
+}
+
+/*
+  FONT SIZE
+  ---------
+  Controls body text size. Default is 1rem (≈16px).
+  Try values between 0.9rem and 1.1rem.
+*/
+
+article, .prose {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/*
+  HEADING SIZES
+  -------------
+  Controls how large section titles appear on each page.
+  These are set relative to the body font size (rem).
+*/
+
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.1rem; }
+h3 { font-size: 1.05rem; }
+
