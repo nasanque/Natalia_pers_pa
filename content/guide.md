@@ -7,7 +7,7 @@ showAuthor: false
 showTableOfContents: true
 ---
 
-> **You are reading this guide on your own website.** That's the point. By the end of this workshop, this page will be yours — and you'll replace it (or delete it) with your own content.
+> Welcome to the tutorial! By the end of this tutorial, this webpage will be yours! Yay!
 
 ---
 
@@ -15,44 +15,56 @@ showTableOfContents: true
 
 Make sure you have done the following **before you arrive**. If something doesn't work, come early and we'll sort it out.
 
+### Planning what you want your page to look like
+1. Find 1-2 webpages of scholars that you like. Consider: What info do they give about themselves? How do they list their publications, interests, etc?
+
 ### Accounts to create
 1. [GitHub](https://github.com) — where your website's code lives
 2. [Netlify](https://netlify.com) — where your website gets published
+3. [KiloCode](https://kilo.ai/) - gives you access to agentic AI coding (for free)
 
 ### Software to install
+
+Attention: if you're on a MacBook, I suggest first installing [Homebrew](https://brew.sh/) and then using it to install these things.
+
 1. [VSCodium](https://vscodium.com) — your code editor (free, open-source version of VS Code)
-2. [Hugo](https://gohugo.io/installation/) — the tool that builds your site. Follow the instructions for your operating system on that page.
+2. [Hugo](https://gohugo.io/installation/) — the tool that will "build" your site. Follow the instructions for your operating system on that page. (Once again, if Mac use the homebrew instructions!)
 3. [Git](https://git-scm.com/downloads) — version control. Follow the instructions for your operating system.
 4. [GitHub Desktop](https://desktop.github.com) — a visual interface for Git. After installing, sign in with your GitHub account.
-5. **KiloCode** — install via VSCodium: open VSCodium → Extensions icon (left sidebar) → search "Kilo Code" → Install
-
-### Set up KiloCode
-1. Open VSCodium and click the KiloCode icon in the left sidebar (it looks like a robot)
-2. Follow the prompt to sign in / create a KiloCode account — this gives you free access to AI models, no API key or extra account needed
-3. Once signed in, pick a model labelled "free" from the dropdown
+5. **KiloCode** — First, open VSCodium: open VSCodium. Then click the Extensions icon (left sidebar, looks like four squares forming a bigger square) → search "Kilo Code" → Install
 
 ### Readiness check — do this before the workshop
-
-**How to open a terminal:**
-- **Mac**: press `Cmd + Space`, type "Terminal", press Enter
-- **Windows**: press the Windows key, type "PowerShell", press Enter
 
 Go through each item below. If any of them fail, try to solve it a bit before coming to our meetup (e.g. use a search engine or ask UvA AI Chat).
 
 | Check | How to test |
 |---|---|
 | VSCodium opens | Launch it — you should see the editor |
-| Hugo is installed | Open a terminal and type `hugo version` — you should see a version number |
-| Git is installed | Open a terminal and type `git --version` — you should see a version number |
 | GitHub Desktop opens | Launch it — you should be logged in to your GitHub account |
 | KiloCode is ready | Open VSCodium → click the robot icon → you should see a chat box and your model selected |
 
+**Then, using the terminal:**
+- **Mac**: press `Cmd + Space`, type "Terminal", press Enter
+- **Windows**: press the Windows key, type "PowerShell", press Enter
+
+| Check | How to test |
+|---|---|
+| Hugo is installed | Open a terminal and type `hugo version` — you should see a version number |
+| Git is installed | Open a terminal and type `git --version` — you should see a version number |
+
+If all is good, you're ready for the workshop! Yay!
 
 ---
+
+# Wait to go through the below when we're together!
 
 ## Step 1 — Clone This Template
 
 You are going to make a copy of this website and make it your own.
+
+For this, we'll use **GitHub** — a website where code lives online. Think of it as a kind of Google Drive for code: your project's files (a bundle of files like this is called a *repository*, or "repo" for short) are stored there, other people can see and reuse them, and it's also where your finished website's code will be hosted.
+
+We'll start the way most coding projects do: by **forking**. Forking simply means making your own personal copy of someone else's repo. You'll fork *my* template into your own GitHub account, so you can change everything freely without ever touching the original.
 
 1. Open [this repository on GitHub](https://github.com/gabrielopereira/PhDPersonalPageTutorial)
 2. Click the green **Fork** button (top right) — this creates your own copy
@@ -80,9 +92,9 @@ You should see this website. Every time you save a file, the browser will refres
 
 ## Step 3 — Deploy to Netlify (Get a Live URL)
 
-Do this *before* customising — it's motivating to see your site live.
+Do this *before* customising — it's motivating to see your site live before doing anything else.
 
-1. Push your fork to GitHub (it may already be there — check GitHub Desktop)
+1. Because you *forked* the template in Step 1 (made your own copy on GitHub), your site's code is already on GitHub — there's nothing to upload yet. Just open GitHub Desktop and confirm your repository is there.
 2. Go to [netlify.com](https://netlify.com) → Log in → **Add new site** → **Import an existing project**
 3. Connect GitHub and select your repository
 4. Build settings are already configured in `netlify.toml` — just click **Deploy site**
@@ -94,22 +106,35 @@ From now on, every time you push a commit, your site updates automatically. Magi
 
 ## Step 4 — Meet KiloCode (Vibe Coding)
 
-KiloCode is an AI assistant that lives inside your editor. You talk to it in plain language, it writes or edits code for you, and you decide whether to accept the changes.
+KiloCode allows you to do agentic coding. You talk to it in plain language, it writes or edits code for you, and you decide whether to accept the changes. It can use some free models, but of course you can also pay for premium models.
 
-**The key principles:**
+**Some key principles when doing agentic coding:**
 - **You are in charge.** KiloCode proposes; you decide.
 - **Read before accepting.** Don't click "Accept" without understanding what changed.
 - **Be specific.** "Change my bio" is worse than "Replace the bio text in `content/about.md` with the following..."
-- **Test after every change.** Save the file, check the browser preview, then commit.
+- **Test after every change.** Save the file, check the browser preview, and only then commit.
 
 **Try it now:** Open KiloCode (robot icon) and type:
-> "In the file `content/about.md`, replace the name 'Dr. Reginald Huffington-Smythe III' with my own name throughout."
+> "Replace the background color with purple."
 
 ---
 
 ## Step 5 — Customise Your Site
 
-Work through these in order. Use KiloCode to help, but also try editing files directly in VSCodium — it's good to see what's happening under the hood.
+Work through these in order. Use KiloCode to help, but also try editing files directly in VSCodium... it's good to see what's happening under the hood.
+
+First, a quick map. These are the files and folders worth knowing — you only really need to touch a handful:
+
+| File or folder | What it's for |
+|---|---|
+| `content/` | Your pages — `about.md`, `research.md`, `publications.md`, and so on. One file = one page, in plain Markdown. This is where you'll spend most of your time. |
+| `config/_default/languages.en.toml` | Your personal details: name, description, bio, email, social links. |
+| `config/_default/menus.en.toml` | The links shown across the top menu (their names and order). |
+| `config/_default/params.toml` | Site-wide appearance and settings (e.g. the colour scheme, what's shown on the homepage). |
+| `config/_default/hugo.toml` | Core site settings. The main thing to change here is `baseURL` — set it to your own site's URL. |
+| `assets/img/` | Images live here. Any photo you want to use (like a profile picture) goes in this folder. |
+
+Everything else — `layouts/`, `themes/`, and the various build folders — is the machinery that turns your content into a website. You generally won't need to touch it by hand. But if you ever want to change the layout or styling, that's a perfect job for KiloCode: describe what you want and let it find the right file.
 
 ### Your identity
 Edit `config/_default/languages.en.toml`:
@@ -137,6 +162,10 @@ When you're done, either:
 ---
 
 ## Step 6 — Commit and Push
+
+**Committing** means saving a snapshot of your changes with a short note describing them. Each commit is a checkpoint in your project's history — so you can always look back at what changed, and undo it if something breaks.
+
+**Pushing** means uploading your commits from your computer up to GitHub. Once they land on GitHub, Netlify notices automatically and rebuilds your live site — which is why your changes appear online a minute later.
 
 1. Open **GitHub Desktop**
 2. You'll see your changed files listed
