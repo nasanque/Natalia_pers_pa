@@ -1,6 +1,6 @@
 ---
-title: "Dr. Reginald Huffington-Smythe III"
-description: "Professor of Postmodern Semiotics. Amateur Competitive Crossword Solver. Reluctant dog owner."
+title: "Natalia Sánchez Querubín"
+description: "Assistant Professor of New Media and Digital Culture"
 ---
 
-Hi! This is Natalia. This is my new website.
+Hi! This is Natalia. This is my new website!
